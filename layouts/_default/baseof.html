@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    {{- partial "meta.html" . -}}
+    
+    {{- /* Font preload for better LCP */ -}}
+    <link rel="preload" href="{{ "fonts/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+    
+    {{- /* Hugo Pipes: minify and fingerprint CSS */ -}}
+    {{- $style := resources.Get "css/style.css" | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    
+    <script>
+        // Set theme preference immediately to prevent flash
+        (function() {
+            const saved = localStorage.getItem('theme') || 'light';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved !== 'light' && (saved === 'dark' || prefersDark) ? 'dark' : 'light';
+            if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        {{- partial "header.html" . -}}
+        
+        <main class="content">
+            {{- block "main" . }}{{- end }}
+        </main>
+        
+        {{- partial "footer.html" . -}}
+    </div>
+    
+    <script src="{{ "js/theme.js" | relURL }}"></script>
+</body>
+</html>

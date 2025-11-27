@@ -1,0 +1,12 @@
+name = "Hugo Shellish"
+license = "MIT"
+licenselink = "https://github.com/markw/hugo_shellish/blob/main/LICENSE"
+description = "A clean, minimal shell/terminal-inspired Hugo theme"
+homepage = "https://github.com/markw/hugo_shellish"
+tags = ["minimal", "terminal", "shell", "dark", "blog"]
+features = ["blog", "projects", "responsive"]
+min_version = "0.120.0"
+
+[author]
+name = "Mark W"
+homepage = "https://markw.dev"

@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+<section class="intro">
+    <h1>{{ .Site.Title }}</h1>
+    {{ .Content }}
+</section>
+
+{{- if .Site.Params.social.rss }}
+<section class="feeds">
+    <h2>Latest Posts</h2>
+    <ul>
+        {{- range first 5 (where .Site.RegularPages "Type" "blog") }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        </li>
+        {{- end }}
+    </ul>
+    <p><a href="/blog">view all →</a></p>
+</section>
+{{- end }}
+
+{{- end }}

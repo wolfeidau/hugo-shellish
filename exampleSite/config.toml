@@ -1,0 +1,50 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Shellish Site"
+theme = "hugo_shellish"
+
+[pagination]
+  pagerSize = 10
+  path = "page"
+
+[params]
+  # Site metadata
+  author = "Your Name"
+  description = "A minimal shell-inspired website"
+  favicon = "/favicon.ico"
+  
+  # Color theme
+  backgroundColor = "#0d1117"
+  textColor = "#c9d1d9"
+  accentColor = "#58a6ff"
+  
+  # Navigation
+  showBreadcrumbs = true
+  
+  # Social links
+  [params.social]
+    github = ""
+    twitter = ""
+    linkedin = ""
+    rss = true
+
+[menu]
+  [[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "blog"
+    url = "/blog"
+    weight = 2
+  [[menu.main]]
+    name = "projects"
+    url = "/projects"
+    weight = 3
+
+[markup.highlight]
+  style = "base16-snazzy"
+  lineNos = false
+
+[markup.goldmark.renderer]
+  unsafe = true

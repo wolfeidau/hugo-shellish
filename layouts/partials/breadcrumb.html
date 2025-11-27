@@ -1,0 +1,8 @@
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <ul>
+        <li><a href="{{ "/" | relURL }}">home</a></li>
+        {{- if ne .Title "" }}
+        <li><span>{{ .Title }}</span></li>
+        {{- end }}
+    </ul>
+</nav>

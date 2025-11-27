@@ -1,0 +1,23 @@
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+.pnp
+
+# Build output
+dist/
+build/

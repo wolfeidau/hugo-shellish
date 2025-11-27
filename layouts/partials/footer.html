@@ -1,0 +1,23 @@
+<footer class="site-footer">
+    <div class="footer-content">
+        {{- $social := .Site.Params.social }}
+        {{- if or $social.github $social.twitter $social.linkedin $social.rss }}
+        <div class="social-links">
+            {{- if $social.github }}
+            <a href="https://github.com/{{ $social.github }}" title="GitHub" rel="noopener noreferrer">github</a>
+            {{- end }}
+            {{- if $social.twitter }}
+            <a href="https://twitter.com/{{ $social.twitter }}" title="Twitter" rel="noopener noreferrer">twitter</a>
+            {{- end }}
+            {{- if $social.linkedin }}
+            <a href="https://linkedin.com/in/{{ $social.linkedin }}" title="LinkedIn" rel="noopener noreferrer">linkedin</a>
+            {{- end }}
+            {{- if $social.rss }}
+            <a href="{{ "/index.xml" | relURL }}" title="RSS" rel="noopener noreferrer">rss</a>
+            {{- end }}
+        </div>
+        {{- end }}
+        
+        <p class="footer-text">© {{ now.Year }} {{ .Site.Params.author }}</p>
+    </div>
+</footer>
