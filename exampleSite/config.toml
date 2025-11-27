@@ -20,6 +20,7 @@ theme = "hugo-shellish"
   
   # Navigation
   showBreadcrumbs = true
+  showNotes = false
   
   # Social links
   [params.social]
@@ -38,9 +39,13 @@ theme = "hugo-shellish"
     url = "/blog"
     weight = 2
   [[menu.main]]
+    name = "notes"
+    url = "/notes"
+    weight = 3
+  [[menu.main]]
     name = "projects"
     url = "/projects"
-    weight = 3
+    weight = 4
 
 [markup.highlight]
   style = "base16-snazzy"

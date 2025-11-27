@@ -251,10 +251,19 @@ body {
 }
 
 /* Feeds Section */
-.feeds {
+.feeds-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-xl);
   border-top: 2px dashed var(--border-color);
+}
+
+.feeds {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .feeds h2 {
@@ -565,6 +574,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .feeds-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
   .header-content {
     flex-wrap: wrap;
     gap: var(--spacing-md);

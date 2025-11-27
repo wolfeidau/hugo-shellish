@@ -6,15 +6,33 @@
 </section>
 
 {{- if .Site.Params.social.rss }}
-<section class="feeds">
-    <h2>Latest Posts</h2>
-    <ul class="latest-posts">
-        {{- range first 5 (where .Site.RegularPages "Type" "blog") }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
-        {{- end }}
-    </ul>
-    <p><a href="/blog">view all →</a></p>
-</section>
+{{- $showNotes := .Site.Params.showNotes | default true }}
+{{- $notes := where .Site.RegularPages "Type" "notes" }}
+{{- $hasNotes := and $showNotes $notes }}
+
+{{- if $hasNotes }}<div class="feeds-container">{{- end }}
+    <section class="feeds feeds-posts">
+        <h2>Latest Posts</h2>
+        <ul class="latest-posts">
+            {{- range first 5 (where .Site.RegularPages "Type" "blog") }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
+            {{- end }}
+        </ul>
+        <p><a href="/blog">view all →</a></p>
+    </section>
+
+    {{- if $hasNotes }}
+    <section class="feeds feeds-notes">
+        <h2>Latest Notes</h2>
+        <ul class="latest-posts">
+            {{- range first 5 $notes }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
+            {{- end }}
+        </ul>
+        <p><a href="/notes">view all →</a></p>
+    </section>
+    {{- end }}
+{{- if $hasNotes }}</div>{{- end }}
 {{- end }}
 
 {{- end }}
