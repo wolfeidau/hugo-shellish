@@ -37,7 +37,7 @@ content/
 ```
 
 ### Configuration Structure
-- Theme name: `hugo_shellish`
+- Theme name: `hugo-shellish`
 - Hugo version: Latest (v0.120+)
 - Assets: CSS, fonts, optional minimal JS for command palette
 - Data files: Optional for structured content (github activity, social links)
@@ -46,7 +46,7 @@ content/
 
 ### Directory Structure
 ```
-hugo_shellish/
+hugo-shellish/
   archetypes/
     default.md
     post.md
@@ -207,7 +207,7 @@ hugo_shellish/
 
 ### File Structure
 ```
-hugo_shellish/
+hugo-shellish/
 ├── archetypes/
 │   ├── default.md
 │   └── post.md
@@ -237,7 +237,7 @@ hugo_shellish/
 │   │   ├── blog/
 │   │   ├── projects/
 │   │   └── ...
-│   └── themes/hugo_shellish (symlink)
+│   └── themes/hugo-shellish (symlink)
 ├── README.md
 ├── theme.toml
 └── .gitignore

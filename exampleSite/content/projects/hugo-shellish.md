@@ -37,7 +37,7 @@ It's perfect for:
 
 ## Links
 
-- [GitHub Repository](https://github.com/markw/hugo_shellish)
+- [GitHub Repository](https://github.com/markw/hugo-shellish)
 - [Live Demo](#)
 - [Documentation](#)
 
@@ -47,8 +47,8 @@ It's perfect for:
 hugo new site my-site
 cd my-site
 git init
-git submodule add https://github.com/markw/hugo_shellish themes/hugo_shellish
-echo 'theme = "hugo_shellish"' >> config.toml
+git submodule add https://github.com/markw/hugo-shellish themes/hugo-shellish
+echo 'theme = "hugo-shellish"' >> config.toml
 hugo server
 ```
 

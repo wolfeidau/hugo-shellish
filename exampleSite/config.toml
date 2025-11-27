@@ -1,7 +1,7 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "Shellish Site"
-theme = "hugo_shellish"
+theme = "hugo-shellish"
 
 [pagination]
   pagerSize = 10

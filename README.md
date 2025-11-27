@@ -20,19 +20,19 @@ A clean, minimal shell/terminal-inspired Hugo theme with a focus on simplicity a
 hugo new site my-site
 cd my-site
 git init
-git submodule add https://github.com/markw/hugo_shellish themes/hugo_shellish
+git submodule add https://github.com/markw/hugo-shellish themes/hugo-shellish
 ```
 
 ### For an existing site:
 
 ```bash
-git submodule add https://github.com/markw/hugo_shellish themes/hugo_shellish
+git submodule add https://github.com/markw/hugo-shellish themes/hugo-shellish
 ```
 
 Then update your `config.toml`:
 
 ```toml
-theme = "hugo_shellish"
+theme = "hugo-shellish"
 ```
 
 ## Configuration
@@ -43,7 +43,7 @@ Copy the example config from `exampleSite/config.toml` and customize for your ne
 baseURL = "https://yourdomain.com/"
 languageCode = "en-us"
 title = "Your Site Title"
-theme = "hugo_shellish"
+theme = "hugo-shellish"
 
 [params]
   author = "Your Name"
@@ -116,4 +116,4 @@ MIT License - feel free to use this theme for any purpose.
 
 ## Support
 
-For issues, feature requests, or contributions, visit the [GitHub repository](https://github.com/markw/hugo_shellish).
+For issues, feature requests, or contributions, visit the [GitHub repository](https://github.com/markw/hugo-shellish).
