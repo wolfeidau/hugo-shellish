@@ -48,7 +48,7 @@ theme = "hugo-shellish"
     weight = 4
 
 [markup.highlight]
-  style = "base16-snazzy"
+  style = "nord"
   lineNos = false
 
 [markup.goldmark.renderer]
