@@ -66,7 +66,7 @@ body {
 
 /* Header */
 .site-header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px dashed var(--border-color);
   padding: var(--spacing-lg) 0;
   margin-bottom: var(--spacing-xl);
 }
@@ -211,7 +211,7 @@ body {
 .post-item {
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px dashed var(--border-color);
 }
 
 .post-item:last-child {
@@ -251,6 +251,16 @@ body {
 }
 
 /* Feeds Section */
+.feeds {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 2px dashed var(--border-color);
+}
+
+.feeds h2 {
+  margin-bottom: var(--spacing-md);
+}
+
 .feeds a {
   color: var(--accent-color);
   text-decoration: none;
@@ -266,6 +276,22 @@ body {
   opacity: 0.8;
 }
 
+.latest-posts {
+  list-style: disc;
+  list-style-position: inside;
+  margin-bottom: var(--spacing-md);
+}
+
+.latest-posts li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.latest-posts .date {
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin-left: var(--spacing-sm);
+}
+
 /* Post Article */
 .post {
   margin-bottom: var(--spacing-xl);
@@ -274,7 +300,7 @@ body {
 .post-header {
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px dashed var(--border-color);
 }
 
 .post-title {
@@ -296,7 +322,7 @@ body {
   color: var(--accent-color);
   text-decoration: none;
   font-size: 0.85rem;
-  border: 1px solid var(--border-color);
+  border: 2px dashed var(--border-color);
   border-radius: 3px;
   transition: background-color 0.2s;
 }
@@ -358,7 +384,7 @@ body {
 
 .post-content pre {
   background-color: transparent;
-  border: 1px solid var(--border-color);
+  border: 2px dashed var(--border-color);
   border-radius: 4px;
   padding: 1.0rem;
   overflow-x: auto;
@@ -385,7 +411,7 @@ body {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px dashed var(--border-color);
 }
 
 .post-nav a {
@@ -404,6 +430,44 @@ body {
   text-align: right;
 }
 
+/* Related Posts */
+.related-posts {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 2px dashed var(--border-color);
+}
+
+.related-posts h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.7;
+}
+
+.related-posts ul {
+  list-style: none;
+}
+
+.related-posts li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.related-posts a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.related-posts a:visited {
+  color: var(--accent-color);
+  opacity: var(--visited-opacity);
+}
+
+.related-posts a:hover {
+  opacity: 0.8;
+}
+
 /* Pagination */
 .pagination {
   display: flex;
@@ -411,7 +475,7 @@ body {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
   padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px dashed var(--border-color);
 }
 
 .pagination a {
@@ -426,7 +490,7 @@ body {
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid var(--border-color);
+  border-top: 2px dashed var(--border-color);
   padding: var(--spacing-lg) 0;
   margin-top: var(--spacing-xl);
   font-size: 0.9rem;

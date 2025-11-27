@@ -24,16 +24,7 @@
         {{ .Content }}
     </div>
 
-    {{- if or .NextInSection .PrevInSection }}
-    <nav class="post-nav">
-        {{- if .PrevInSection }}
-        <a href="{{ .PrevInSection.Permalink }}" class="prev">← {{ .PrevInSection.Title }}</a>
-        {{- end }}
-        {{- if .NextInSection }}
-        <a href="{{ .NextInSection.Permalink }}" class="next">{{ .NextInSection.Title }} →</a>
-        {{- end }}
-    </nav>
-    {{- end }}
+    {{- partial "related.html" . -}}
 </article>
 
 {{- end }}

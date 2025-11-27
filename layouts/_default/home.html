@@ -8,12 +8,9 @@
 {{- if .Site.Params.social.rss }}
 <section class="feeds">
     <h2>Latest Posts</h2>
-    <ul>
+    <ul class="latest-posts">
         {{- range first 5 (where .Site.RegularPages "Type" "blog") }}
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        </li>
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
         {{- end }}
     </ul>
     <p><a href="/blog">view all →</a></p>
