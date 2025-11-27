@@ -31,6 +31,8 @@
         {{- partial "footer.html" . -}}
     </div>
     
-    <script src="{{ "js/theme.js" | relURL }}"></script>
+    {{- /* Hugo Pipes: minify and fingerprint JS */ -}}
+    {{- $script := resources.Get "js/theme.js" | minify | fingerprint -}}
+    <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 </body>
 </html>

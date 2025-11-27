@@ -110,6 +110,10 @@ The theme supports different content sections. Configure menu items in your conf
     weight = 2
 ```
 
+# Icons
+
+This theme uses icons from [Flowbite Icons](https://flowbite.com/icons/) which are licenced under the MIT License.
+
 ## License
 
 MIT License - feel free to use this theme for any purpose.

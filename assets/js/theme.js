@@ -33,3 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateIcon();
   });
 });
+
+// Make headings self-linking
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4').forEach(heading => {
+    if (heading.id) {
+      heading.style.cursor = 'pointer';
+      heading.addEventListener('click', () => {
+        window.location.hash = heading.id;
+      });
+    }
+  });
+});

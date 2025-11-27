@@ -341,9 +341,43 @@ body {
   margin: var(--spacing-lg) 0 var(--spacing-md) 0;
 }
 
+.post-content h2::before {
+  content: "## ";
+  margin-right: var(--spacing-xs);
+}
+
 .post-content h3 {
   font-size: 1.2rem;
   margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+}
+
+.post-content h3::before {
+  content: "### ";
+  margin-right: var(--spacing-xs);
+}
+
+.post-content h4::before {
+  content: "#### ";
+  margin-right: var(--spacing-xs);
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.post-content h2:hover,
+.post-content h3:hover,
+.post-content h4:hover {
+  color: var(--accent-color);
+}
+
+.post-content h2:hover::after,
+.post-content h3:hover::after,
+.post-content h4:hover::after {
+  opacity: 1;
 }
 
 .post-content p {
@@ -384,7 +418,7 @@ body {
 
 .post-content pre {
   background-color: transparent;
-  border: 2px dashed var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 4px;
   padding: 1.0rem;
   overflow-x: auto;
