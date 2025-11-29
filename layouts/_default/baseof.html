@@ -9,7 +9,9 @@
     {{- /* Hugo Pipes: minify and fingerprint CSS */ -}}
     {{- $style := resources.Get "css/style.css" | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-    
+    {{- $syntax := resources.Get "css/syntax.css" | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
+
     <script>
         // Set theme preference immediately to prevent flash
         (function() {

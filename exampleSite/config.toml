@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://www.hubpatrol.dev/"
 languageCode = "en-us"
 title = "Shellish Site"
 theme = "hugo-shellish"
@@ -48,8 +48,9 @@ theme = "hugo-shellish"
     weight = 4
 
 [markup.highlight]
-  style = "nord"
   lineNos = false
+  # using assets/css/syntax.css in the theme to support light/dark mode
+  noClasses = false
 
 [markup.goldmark.renderer]
   unsafe = true
