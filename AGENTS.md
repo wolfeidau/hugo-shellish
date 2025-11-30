@@ -75,3 +75,30 @@ Theme supports these `[params]` in config.toml:
 - `showBreadcrumbs` - Enable/disable breadcrumbs
 - `[params.social]` - Social links (github, twitter, linkedin, rss)
 - `[related]` - Related posts config (tags weight: 100, keywords: 80, date: 10)
+
+### LLM Discovery (llms.txt)
+
+To enable LLM-friendly content discovery, add to your site's config.toml:
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "llms"]
+  page = ["HTML", "md"]
+
+[outputFormats.llms]
+  name = "llms"
+  mediaType = "text/plain"
+  baseName = "llms"
+
+[outputFormats.md]
+  name = "md"
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+```
+
+This generates:
+- `/llms.txt` - Index file with links to all blog posts, projects, and notes
+- `/blog/post-title/index.md` - Markdown versions of individual pages with original frontmatter
+
+LLMs can use llms.txt to discover content, then fetch clean markdown versions for detailed information.

@@ -1,7 +1,24 @@
-baseURL = "https://www.hubpatrol.dev/"
+baseURL = "http://localhost:1313"
 languageCode = "en-us"
 title = "Shellish Site"
 theme = "hugo-shellish"
+
+[outputs]
+  home = ["HTML", "RSS", "llms"]
+  page = ["HTML", "md"]
+
+[outputFormats.llms]
+  name = "llms"
+  mediaType = "text/plain"
+  baseName = "llms"
+
+[outputFormats.md]
+  name = "md"
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+
+
 
 [pagination]
   pagerSize = 10

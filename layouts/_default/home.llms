@@ -1,0 +1,21 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+## Blog Posts
+
+{{ range (where .Site.RegularPages "Type" "blog").ByDate.Reverse | first 20 }}
+- [{{ .Title }}]({{ .Permalink }}index.md)
+{{ end }}
+
+## Projects
+
+{{ range (where .Site.RegularPages "Type" "projects").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}index.md)
+{{ end }}
+
+## Notes
+
+{{ range (where .Site.RegularPages "Type" "notes").ByDate.Reverse | first 10 }}
+- [{{ .Title }}]({{ .Permalink }}index.md)
+{{ end }}
