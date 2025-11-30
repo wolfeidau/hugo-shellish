@@ -12,8 +12,9 @@
 :root {
   --bg-color: #e5e9f0;
   --text-color: #434c5e;
-  --title-color: #d08770;
-  --accent-color: #5e81ac;
+  --text-muted: #5e6779;
+  --title-color: #924e3c;
+  --accent-color: #3b6591;
   --border-color: #d8dee9;
   --code-bg: #e5e9f0;
   --visited-opacity: 1;
@@ -40,7 +41,8 @@
 [data-theme="dark"] {
   --bg-color: #2e3440;
   --text-color: #eceff4;
-  --title-color: #d08770;
+  --text-muted: #a5b1c2;
+  --title-color: #e09279;
   --accent-color: #88c0d0;
   --border-color: #434c5e;
   --code-bg: #3b4252;
@@ -261,8 +263,7 @@ body {
   gap: var(--spacing-sm);
   list-style: none;
   font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.7;
+  color: var(--text-muted);
 }
 
 .breadcrumb a {
@@ -307,7 +308,6 @@ body {
 
 .description {
   margin-bottom: var(--spacing-lg);
-  opacity: 0.9;
 }
 
 .post-list {
@@ -346,14 +346,12 @@ body {
 .post-date {
   display: block;
   font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.6;
+  color: var(--text-muted);
   margin-bottom: var(--spacing-sm);
 }
 
 .post-summary {
   font-size: 0.95rem;
-  opacity: 0.85;
   margin-top: var(--spacing-sm);
 }
 
@@ -403,7 +401,7 @@ body {
 }
 
 .latest-posts .date {
-  opacity: 0.6;
+  color: var(--text-muted);
   font-size: 0.9rem;
   margin-left: var(--spacing-sm);
 }
@@ -554,7 +552,6 @@ body {
   padding-left: var(--spacing-md);
   margin-left: 0;
   margin-bottom: var(--spacing-md);
-  opacity: 0.9;
 }
 
 /* Post Navigation */
@@ -594,7 +591,7 @@ body {
   font-size: 1rem;
   font-weight: normal;
   margin-bottom: var(--spacing-md);
-  opacity: 0.7;
+  color: var(--text-muted);
 }
 
 .related-posts ul {
@@ -678,7 +675,7 @@ body {
 }
 
 .footer-text {
-  opacity: 0.6;
+  color: var(--text-muted);
   font-size: 0.85rem;
 }
 

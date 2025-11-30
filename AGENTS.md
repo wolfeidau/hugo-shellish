@@ -51,6 +51,13 @@ cd exampleSite && hugo --gc --minify
 - No CSS frameworks - pure CSS only
 - Font: JetBrains Mono (woff2)
 
+### Accessibility
+- All text must meet WCAG AA contrast ratio (4.5:1 for body text, 3:1 for large text)
+- Use `--text-muted` for secondary/dimmed text instead of `opacity` (opacity reduces contrast)
+- Light mode colors are adjusted for contrast: `--title-color: #b35d47`, `--accent-color: #3b6591`
+- Dark mode Nord colors pass contrast requirements without adjustment
+- Test color pairs at: https://webaim.org/resources/contrastchecker/
+
 ### Templates
 - Go templates with Hugo functions
 - Partials for reusable components
