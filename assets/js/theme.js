@@ -18,6 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
       sunIcon.classList.add('hidden');
     }
   }
+
+  function transitionIcon() {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const moonIcon = toggle.querySelector('.moon-icon');
+    const sunIcon = toggle.querySelector('.sun-icon');
+    
+    if (isDark) {
+      // Going dark: hide moon, show sun
+      moonIcon.classList.add('hidden');
+      sunIcon.classList.remove('hidden');
+    } else {
+      // Going light: show moon, hide sun
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+    }
+  }
   
   // Set initial icon
   updateIcon();
@@ -30,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     
-    updateIcon();
+    transitionIcon();
   });
 });
 
