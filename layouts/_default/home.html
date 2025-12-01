@@ -14,7 +14,7 @@
     <section class="feeds feeds-posts">
         <h2>Latest Posts</h2>
         <ul class="latest-posts">
-            {{- range first 5 (where .Site.RegularPages "Type" "blog") }}
+            {{- range first (.Site.Params.homePostsCount | default 5) (where .Site.RegularPages "Type" "blog") }}
             <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
             {{- end }}
         </ul>
@@ -25,7 +25,7 @@
     <section class="feeds feeds-notes">
         <h2>Latest Notes</h2>
         <ul class="latest-posts">
-            {{- range first 5 $notes }}
+            {{- range first (.Site.Params.homeNotesCount | default 5) $notes }}
             <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span></li>
             {{- end }}
         </ul>

@@ -18,8 +18,6 @@ theme = "hugo-shellish"
   baseName = "index"
   isPlainText = true
 
-
-
 [pagination]
   pagerSize = 10
   path = "page"
@@ -39,6 +37,10 @@ theme = "hugo-shellish"
   showBreadcrumbs = true
   showNotes = false
   
+  # Home page
+  homePostsCount = 5
+  homeNotesCount = 5
+
   # Social links
   [params.social]
     github = ""
